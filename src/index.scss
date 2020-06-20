@@ -1,0 +1,48 @@
+@import '~antd/dist/antd.css';
+.board {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: calc(50% - 200px);
+    left: calc(50% - 200px);
+    & > .lists {
+        background: #ffe4ed;
+        height: 80%;
+        & > .todo-item {
+            padding: 0px 10px;
+            height: 30px;
+            line-height: 30px;
+            & > .value {
+                padding-left: 10px;
+            }
+            & > .anticon {
+                color: #fff;
+                display: none;
+                float: right;
+            }
+            &:hover {
+                background: #2488eb;
+                & > .anticon {
+                    display: block;
+                }
+            }
+            &.completed {
+                & > .value {
+                    text-decoration: line-through;
+                }
+            }
+        }
+    }
+    & > .footer {
+        height: 20%;
+    }
+    & > .adder {
+        input {
+            width: 80%;
+        }
+        button {
+            width: 20%;
+        }
+    }
+     
+}
